@@ -22,6 +22,7 @@ const companies= [
 
     // })
 
+    //Get 21 and older ages
     //filter
 
 //   let canDrink = [];
@@ -39,5 +40,27 @@ const companies= [
 //   })
 
   //using arrow function
-  const canDrink = ages.filter(age => age >= 21 );
-  console.log(canDrink)
+//   const canDrink = ages.filter(age => age >= 21 );
+//   console.log(canDrink)
+
+
+  //Filter retail companies
+
+//   const retailComp = companies.filter(function(company) {
+//     if(company.category==='Retail'){
+//         return true;
+//     }
+//   })
+
+//   const retailComp = companies.filter(companies => companies.category = 'Retail')
+//   console.log(retailComp);
+
+  //Filter companies from 80s
+
+//   const eightiesComp = companies.filter(companies => (companies.start >= 1980 && companies.start <= "1990") )
+//   console.log(eightiesComp)
+
+//Get companies which lasted 10 or more years than that
+
+const tenOrMore = companies.filter(companies => ( companies.end - companies.start >= 10))
+console.log(tenOrMore)
