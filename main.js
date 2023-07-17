@@ -62,5 +62,28 @@ const companies= [
 
 //Get companies which lasted 10 or more years than that
 
-const tenOrMore = companies.filter(companies => ( companies.end - companies.start >= 10))
+const tenOrMore = companies.filter(companies => 
+  ( companies.end - companies.start >= 10))
 console.log(tenOrMore)
+
+//map
+
+//Create array of company names
+// const compNames = companies.map(function(company) {
+//   return company.name;
+// })
+
+// const testMap = companies.map(function(company) {
+//   return `${company.name}[${company.start} - ${company.end}]`;
+// })
+
+// const testMap = companies.map(company => 
+//    `${company.name}[${company.start} - ${company.end}]`);
+
+// console.log(testMap)
+
+
+const ageMap = ages
+.map(age => Math.sqrt(age))
+.map(age => age * 2)
+console.log(ageMap)
