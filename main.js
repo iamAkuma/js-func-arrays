@@ -1,5 +1,5 @@
 const companies= [
-    {name: "Company One", category: "Finance", start: 1981, end: 2004},
+    {name: "Company One", category: "Finance", start: 1981, end: 2005},
     {name: "Company Two", category: "Retail", start: 1992, end: 2008},
     {name: "Company Three", category: "Auto", start: 1999, end: 2007},
     {name: "Company Four", category: "Retail", start: 1989, end: 2010},
@@ -62,9 +62,9 @@ const companies= [
 
 //Get companies which lasted 10 or more years than that
 
-const tenOrMore = companies.filter(companies => 
-  ( companies.end - companies.start >= 10))
-console.log(tenOrMore)
+// const tenOrMore = companies.filter(companies => 
+//   ( companies.end - companies.start >= 10))
+// console.log(tenOrMore)
 
 //map
 
@@ -83,7 +83,55 @@ console.log(tenOrMore)
 // console.log(testMap)
 
 
-const ageMap = ages
-.map(age => Math.sqrt(age))
+// const ageMap = ages
+// .map(age => Math.sqrt(age))
+// .map(age => age * 2)
+// console.log(ageMap)
+
+//SORT METHOD
+
+//SORT COMPANIES BY START YEAR
+
+// const sortComp = companies.sort(function(c1, c2){
+//   if(c1.start > c2.start) {
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+// })
+
+// const sortedComp = companies.sort((a, b ) => (a.start > b.start ? 1 
+//   : -1))
+
+// console.log(sortedComp)
+
+//SORT AGES
+// const sortedAges = ages.sort((a,b) => a -b) //ascending
+// const sortedAgesdesc = ages.sort((a,b) => b - a) //descending
+
+// console.log(sortedAges)
+// console.log(sortedAgesdesc)
+
+//reduce
+
+// let ageSum = 0;
+// for(let i = 0; i< ages.length; i++) {
+//   ageSum += ages[i]
+
+// }
+
+// const ageSum = ages.reduce((total, age) => total + age, 0)
+
+// //Get total years for all the companies
+// const totalYears = companies.reduce((total, company) => total + (company.end - company.start), 0)
+// console.log(totalYears)
+
+//Combine Methods
+
+const combined = ages
 .map(age => age * 2)
-console.log(ageMap)
+.filter(age => age >= 40)
+.sort((a, b) => a-b)
+.reduce((a, b) => a + b, 0)
+
+console.log(combined)
